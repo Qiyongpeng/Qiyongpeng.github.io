@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Remote Development Project ReportStudent Name: Qi YongpengStudent ID: ZY2557206    System ConfigurationThe development and testing of this project were conducted on a Linux-based environment.The syste">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Assignment 1 - Command Line &amp; Documentation">
+<meta property="og:url" content="http://example.com/files/assignment1.md.html">
+<meta property="og:site_name" content="My Software Technology Blog">
+<meta property="og:description" content="Remote Development Project ReportStudent Name: Qi YongpengStudent ID: ZY2557206    System ConfigurationThe development and testing of this project were conducted on a Linux-based environment.The syste">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-10T09:56:06.054Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="assignment">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Assignment 1 - Command Line &amp; Documentation - My Software Technology Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Assignment</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>Home</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>Archives</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>Categories</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>Tags</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>About</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>Search</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="Light"
+               data-label-dark="Dark">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">Dark</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Assignment 1 - Command Line &amp; Documentation"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <h1 id="Remote-Development-Project-Report"><a href="#Remote-Development-Project-Report" class="headerlink" title="Remote Development Project Report"></a>Remote Development Project Report</h1><p><strong>Student Name</strong>: Qi Yongpeng<br><strong>Student ID</strong>: ZY2557206  </p>
+<hr>
+<h1 id="System-Configuration"><a href="#System-Configuration" class="headerlink" title="System Configuration"></a>System Configuration</h1><p>The development and testing of this project were conducted on a Linux-based environment.<br>The system configuration is summarized in the table below.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU Model</td>
+<td>Intel(R) Core(TM) i7-11800H</td>
+</tr>
+<tr>
+<td>Memory Size</td>
+<td>16GB</td>
+</tr>
+<tr>
+<td>Operating System Version</td>
+<td>Ubuntu 22.04 LTS</td>
+</tr>
+<tr>
+<td>Compiler Version</td>
+<td>GCC 11.4.0</td>
+</tr>
+<tr>
+<td>Python Version</td>
+<td>Python 3.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The following command line tools were used to obtain system information:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">lscpu<br>free -h<br><span class="hljs-built_in">uname</span> -a<br>gcc --version<br>python --version<br></code></pre></td></tr></table></figure>
+<p>These commands allow users to inspect hardware specifications and software environment details directly from the Linux terminal.</p>
+<hr>
+<h1 id="Implementation-Details"><a href="#Implementation-Details" class="headerlink" title="Implementation Details"></a>Implementation Details</h1><p>Matrix multiplication is an important operation in linear algebra and is widely used in scientific computing, machine learning, and data analysis.</p>
+<p>Given two matrices:</p>
+<ul>
+<li>Matrix <strong>A</strong> with dimension <strong>m × n</strong></li>
+<li>Matrix <strong>B</strong> with dimension <strong>n × p</strong></li>
+</ul>
+<p>The resulting matrix <strong>C</strong> will have dimension <strong>m × p</strong>.</p>
+<p>Each element of matrix <strong>C</strong> is calculated as:</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs inform7">C<span class="hljs-comment">[i]</span><span class="hljs-comment">[j]</span> = sum(A<span class="hljs-comment">[i]</span><span class="hljs-comment">[k]</span> * B<span class="hljs-comment">[k]</span><span class="hljs-comment">[j]</span>)<br></code></pre></td></tr></table></figure>
+<p>This formula means that the element in row <em>i</em> and column <em>j</em> of the result matrix is obtained by multiplying corresponding elements of row <em>i</em> in matrix A and column <em>j</em> in matrix B, then summing the results.</p>
+<hr>
+<h1 id="Python-Language-Implementation"><a href="#Python-Language-Implementation" class="headerlink" title="Python Language Implementation"></a>Python Language Implementation</h1><h2 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h2><p>The matrix multiplication algorithm was implemented using Python.<br>The program performs multiplication using three nested loops.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># matrix_multiplication.py</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">matrix_multiply</span>(<span class="hljs-params">A, B</span>):<br><br>    rows_A = <span class="hljs-built_in">len</span>(A)<br>    cols_A = <span class="hljs-built_in">len</span>(A[<span class="hljs-number">0</span>])<br>    cols_B = <span class="hljs-built_in">len</span>(B[<span class="hljs-number">0</span>])<br><br>    <span class="hljs-comment"># initialize result matrix</span><br>    result = [[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cols_B)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(rows_A)]<br><br>    <span class="hljs-comment"># matrix multiplication</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(rows_A):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cols_B):<br>            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cols_A):<br>                result[i][j] += A[i][k] * B[k][j]<br><br>    <span class="hljs-keyword">return</span> result<br><br><br><span class="hljs-comment"># example matrices (3x3 example)</span><br><br>A = [<br>    [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>],<br>    [<span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],<br>    [<span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>]<br>]<br><br>B = [<br>    [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>],<br>    [<span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],<br>    [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br>]<br><br>C = matrix_multiply(A, B)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Result Matrix:&quot;</span>)<br><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> C:<br>    <span class="hljs-built_in">print</span>(row)<br></code></pre></td></tr></table></figure>
+<hr>
+<h2 id="Execution-Command"><a href="#Execution-Command" class="headerlink" title="Execution Command"></a>Execution Command</h2><p>The program can be executed using the following command in the terminal:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python matrix_multiplication.py<br></code></pre></td></tr></table></figure>
+<p>Expected output:</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">Result Matrix:<br><span class="hljs-string">[21, 12, 14]</span><br><span class="hljs-string">[41, 10, 19]</span><br><span class="hljs-string">[45, 33, 34]</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h1 id="Algorithm-Verification"><a href="#Algorithm-Verification" class="headerlink" title="Algorithm Verification"></a>Algorithm Verification</h1><p>To verify the correctness of the implementation, a larger 3×3 matrix example was used.</p>
+<p>Matrix A:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">2 </span><span class="hljs-number">1</span> <span class="hljs-number">3</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">4</span> <span class="hljs-number">5</span><br><span class="hljs-symbol">7 </span><span class="hljs-number">2</span> <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
+<p>Matrix B:</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">1 </span><span class="hljs-number">3</span> <span class="hljs-number">2</span><br><span class="hljs-symbol">4 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-symbol">5 </span><span class="hljs-number">2</span> <span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+<p>Manual calculation for the first row:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">C</span>[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] = <span class="hljs-number">2</span>×<span class="hljs-number">1</span> + <span class="hljs-number">1</span>×<span class="hljs-number">4</span> + <span class="hljs-number">3</span>×<span class="hljs-number">5</span> = <span class="hljs-number">21</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">1</span>][<span class="hljs-number">2</span>] = <span class="hljs-number">2</span>×<span class="hljs-number">3</span> + <span class="hljs-number">1</span>×<span class="hljs-number">0</span> + <span class="hljs-number">3</span>×<span class="hljs-number">2</span> = <span class="hljs-number">12</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">1</span>][<span class="hljs-number">3</span>] = <span class="hljs-number">2</span>×<span class="hljs-number">2</span> + <span class="hljs-number">1</span>×<span class="hljs-number">1</span> + <span class="hljs-number">3</span>×<span class="hljs-number">3</span> = <span class="hljs-number">14</span><br></code></pre></td></tr></table></figure>
+<p>Second row:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">C</span>[<span class="hljs-number">2</span>][<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>×<span class="hljs-number">1</span> + <span class="hljs-number">4</span>×<span class="hljs-number">4</span> + <span class="hljs-number">5</span>×<span class="hljs-number">5</span> = <span class="hljs-number">41</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">2</span>][<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>×<span class="hljs-number">3</span> + <span class="hljs-number">4</span>×<span class="hljs-number">0</span> + <span class="hljs-number">5</span>×<span class="hljs-number">2</span> = <span class="hljs-number">10</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">2</span>][<span class="hljs-number">3</span>] = <span class="hljs-number">0</span>×<span class="hljs-number">2</span> + <span class="hljs-number">4</span>×<span class="hljs-number">1</span> + <span class="hljs-number">5</span>×<span class="hljs-number">3</span> = <span class="hljs-number">19</span><br></code></pre></td></tr></table></figure>
+<p>Third row:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">C</span>[<span class="hljs-number">3</span>][<span class="hljs-number">1</span>] = <span class="hljs-number">7</span>×<span class="hljs-number">1</span> + <span class="hljs-number">2</span>×<span class="hljs-number">4</span> + <span class="hljs-number">6</span>×<span class="hljs-number">5</span> = <span class="hljs-number">45</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">3</span>][<span class="hljs-number">2</span>] = <span class="hljs-number">7</span>×<span class="hljs-number">3</span> + <span class="hljs-number">2</span>×<span class="hljs-number">0</span> + <span class="hljs-number">6</span>×<span class="hljs-number">2</span> = <span class="hljs-number">33</span><br><span class="hljs-attribute">C</span>[<span class="hljs-number">3</span>][<span class="hljs-number">3</span>] = <span class="hljs-number">7</span>×<span class="hljs-number">2</span> + <span class="hljs-number">2</span>×<span class="hljs-number">1</span> + <span class="hljs-number">6</span>×<span class="hljs-number">3</span> = <span class="hljs-number">34</span><br></code></pre></td></tr></table></figure>
+<p>The calculated results match the output generated by the Python program, confirming the correctness of the matrix multiplication algorithm.</p>
+<hr>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>In this project, several important concepts in software development and system operation were explored.</p>
+<p>First, the Unix/Linux command line was used to inspect system configurations and execute programs efficiently.<br>Second, Markdown was used to create structured technical documentation that can be easily converted into other formats such as PDF.<br>Third, a matrix multiplication algorithm was implemented using Python and verified with test cases.</p>
+<p>Through this assignment, I gained practical experience with command line tools, documentation practices, and algorithm implementation using an interpreted programming language.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><p>Python Official Documentation<br><a target="_blank" rel="noopener" href="https://docs.python.org/">https://docs.python.org/</a></p>
+</li>
+<li><p>Markdown Guide<br><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">https://www.markdownguide.org/</a></p>
+</li>
+<li><p>Linux Command Line Documentation<br><a target="_blank" rel="noopener" href="https://linuxcommand.org/">https://linuxcommand.org/</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><h2 id="Additional-Notes"><a href="#Additional-Notes" class="headerlink" title="Additional Notes"></a>Additional Notes</h2><p>Matrix multiplication is a computationally intensive operation for large matrices.<br>Future work could involve implementing the algorithm using a compiled language such as C or C++ and comparing the execution performance between interpreted and compiled languages.</p>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
