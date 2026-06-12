@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#061B49">
+  <meta name="author" content="Qi Yongpeng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Assignment 4 - UniversalWeekly AI Weekly Report Management SystemStudent Information Name: Qi Yongpeng Student ID: ZY2557206 Project Name: UniversalWeekly Project Type: Dual-role weekly report managem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Assignment 4 - UniversalWeekly AI Weekly Report Management System">
+<meta property="og:url" content="https://qiyongpeng.github.io/2026/06/12/assignment4/index.html">
+<meta property="og:site_name" content="Software Technology Blog">
+<meta property="og:description" content="Assignment 4 - UniversalWeekly AI Weekly Report Management SystemStudent Information Name: Qi Yongpeng Student ID: ZY2557206 Project Name: UniversalWeekly Project Type: Dual-role weekly report managem">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://qiyongpeng.github.io/2026/06/12/assignment4/main-page.png">
+<meta property="article:published_time" content="2026-06-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-12T09:42:43.598Z">
+<meta property="article:author" content="Qi Yongpeng">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Assignment">
+<meta property="article:tag" content="PyQt6">
+<meta property="article:tag" content="Software Engineering">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://qiyongpeng.github.io/2026/06/12/assignment4/main-page.png">
+  
+  
+  
+  <title>Assignment 4 - UniversalWeekly AI Weekly Report Management System - Software Technology Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"qiyongpeng.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 58vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Software Technology Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>Home</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>Archives</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>Categories</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>Tags</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>About</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>Search</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="Light"
+               data-label-dark="Dark">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">Dark</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/2026/06/12/assignment4/main-page.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.45)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Assignment 4 - UniversalWeekly AI Weekly Report Management System"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-06-12 00:00" pubdate>
+          June 12, 2026 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          13k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          111 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Assignment 4 - UniversalWeekly AI Weekly Report Management System</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Assignment-4-UniversalWeekly-AI-Weekly-Report-Management-System"><a href="#Assignment-4-UniversalWeekly-AI-Weekly-Report-Management-System" class="headerlink" title="Assignment 4 - UniversalWeekly AI Weekly Report Management System"></a>Assignment 4 - UniversalWeekly AI Weekly Report Management System</h1><h2 id="Student-Information"><a href="#Student-Information" class="headerlink" title="Student Information"></a>Student Information</h2><ul>
+<li>Name: Qi Yongpeng</li>
+<li>Student ID: ZY2557206</li>
+<li>Project Name: UniversalWeekly</li>
+<li>Project Type: Dual-role weekly report management system</li>
+<li>Main Technology Stack: Python, PyQt6, SQLite, Matplotlib, local LLM / DeepSeek API</li>
+</ul>
+<div class="uw-report-hero">
+  <div>
+    <p class="uw-kicker">Assignment 4 Project Report</p>
+    <h2>UniversalWeekly</h2>
+    <p>
+      UniversalWeekly is a desktop application designed for weekly report submission,
+      teacher review, progress tracking, AI-assisted writing, and academic utility tools.
+      The project focuses on a practical student-teacher workflow rather than a single isolated function.
+    </p>
+  </div>
+  <div class="uw-hero-metrics">
+    <span><b>2</b> User Roles</span>
+    <span><b>10+</b> Tool Modules</span>
+    <span><b>AI</b> Report Assistant</span>
+  </div>
+</div>
+
+<p><img src="main-page.png" srcset="/img/loading.gif" lazyload alt="UniversalWeekly Main Dashboard"></p>
+<h2 id="1-Project-Background"><a href="#1-Project-Background" class="headerlink" title="1. Project Background"></a>1. Project Background</h2><p>Weekly reports are commonly used in coursework, graduation projects, software engineering training, and research supervision. However, the traditional workflow usually depends on fragmented tools such as Word documents, spreadsheets, chat messages, and email attachments. This makes it difficult for students to manage report drafts, track feedback, review historical progress, and generate structured summaries.</p>
+<p>UniversalWeekly was developed to solve this problem. It provides an integrated weekly report management platform with two main roles: students and teachers. Students can create, edit, submit, export, and improve weekly reports. Teachers can review reports, comment on student work, manage feedback templates, and check class-level progress. The system also includes an AI assistant that helps students generate report content from keywords, polish language, check completeness, and prepare presentation scripts.</p>
+<p>The goal of this assignment is not only to implement a working application, but also to present a complete software product with clear user flows, data storage, interface design, AI integration, and visual analytics.</p>
+<h2 id="2-System-Objectives"><a href="#2-System-Objectives" class="headerlink" title="2. System Objectives"></a>2. System Objectives</h2><p>The system was designed around the following objectives:</p>
+<ol>
+<li>Build a dual-role weekly report platform for both students and teachers.</li>
+<li>Support the full weekly report workflow: create, edit, submit, review, revise, export, and archive.</li>
+<li>Provide AI-assisted writing functions for generating, polishing, translating, and summarizing content.</li>
+<li>Use SQLite to persist users, weekly reports, tasks, problems, comments, templates, and logs.</li>
+<li>Provide dashboard views and statistical charts for progress tracking.</li>
+<li>Add academic and productivity tools such as reference conversion, file conversion, translation, paper reading cards, memo board, weather/time, and AI call history.</li>
+<li>Improve the user interface with a modern SaaS dashboard style.</li>
+</ol>
+<h2 id="3-Development-Environment-and-Technology-Stack"><a href="#3-Development-Environment-and-Technology-Stack" class="headerlink" title="3. Development Environment and Technology Stack"></a>3. Development Environment and Technology Stack</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GUI Framework</td>
+<td>PyQt6</td>
+<td>Desktop interface, dialogs, tables, cards, navigation</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>SQLite</td>
+<td>Local data storage for users, reports, tasks, feedback, logs</td>
+</tr>
+<tr>
+<td>Visualization</td>
+<td>Matplotlib</td>
+<td>Statistics charts and progress views</td>
+</tr>
+<tr>
+<td>AI Service</td>
+<td>Local LLM / DeepSeek API</td>
+<td>Weekly report generation, polishing, paper card generation, translation</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Markdown, TXT, DOCX, Excel</td>
+<td>Report and statistics export</td>
+</tr>
+<tr>
+<td>Application Style</td>
+<td>QSS</td>
+<td>Consistent component design and modern interface styling</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The project uses a layered structure. The <code>database</code> module manages persistent data, the <code>business</code> module implements service logic, and the <code>ui</code> module contains all graphical user interfaces. This separation makes the program easier to maintain and extend.</p>
+<h2 id="4-Overall-System-Architecture"><a href="#4-Overall-System-Architecture" class="headerlink" title="4. Overall System Architecture"></a>4. Overall System Architecture</h2><p>UniversalWeekly is organized into four major layers:</p>
+<ul>
+<li>User Interface Layer: Login page, student dashboard, teacher dashboard, report editor, tool dialogs, AI assistant window.</li>
+<li>Business Service Layer: Authentication, report processing, export, template management, local LLM service, translation, file conversion.</li>
+<li>Data Layer: SQLite database, data models, operation logs, report records, comments, tasks, problems.</li>
+<li>AI and Utility Layer: DeepSeek chat assistant, local LLM integration, paper reading card generation, presentation report generation, AI call history.</li>
+</ul>
+<p>The core workflow is shown below:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">User Login<br>   |<br>   +-- Student Role --&gt; Create Report --&gt; AI Polish / Check --&gt; Submit --&gt; Receive Feedback --&gt; Export<br>   |<br>   +-- Teacher Role --&gt; View Reports --&gt; Add Comment --&gt; Batch Review --&gt; Class Statistics --&gt; Export<br></code></pre></td></tr></table></figure>
+<p>This structure allows the system to serve both individual students and class-level teachers.</p>
+<h2 id="5-Login-and-Role-Management"><a href="#5-Login-and-Role-Management" class="headerlink" title="5. Login and Role Management"></a>5. Login and Role Management</h2><p>The login interface is the entrance of the system. It supports student and teacher accounts and can route different users to different main windows after successful authentication. The system also contains demo accounts, making it convenient for testing and classroom demonstration.</p>
+<p><img src="login.png" srcset="/img/loading.gif" lazyload alt="Login Interface"></p>
+<p>The login module includes:</p>
+<ul>
+<li>Student and teacher identity management.</li>
+<li>Login and registration functions.</li>
+<li>User profile fields such as name, student ID, class, and email.</li>
+<li>Automatic routing to the student interface or teacher interface.</li>
+<li>Local SQLite authentication.</li>
+</ul>
+<p>This design makes the application more realistic than a single-user report tool, because weekly report management is naturally a communication process between students and teachers.</p>
+<h2 id="6-Student-Main-Page-and-Dashboard"><a href="#6-Student-Main-Page-and-Dashboard" class="headerlink" title="6. Student Main Page and Dashboard"></a>6. Student Main Page and Dashboard</h2><p>The student dashboard provides an overview of personal weekly report activity. It uses a modern dashboard layout with cards, statistics, recent reports, and quick actions.</p>
+<p><img src="main-page.png" srcset="/img/loading.gif" lazyload alt="Student Main Page"></p>
+<p>The dashboard contains:</p>
+<ul>
+<li>Total reports.</li>
+<li>Submitted reports.</li>
+<li>Unread feedback.</li>
+<li>Average completeness.</li>
+<li>Recent weekly report preview.</li>
+<li>Quick entrance to the AI assistant and tools center.</li>
+</ul>
+<p>This page is designed as a control center. Instead of forcing users to search for functions in multiple windows, the dashboard summarizes the most important status information and provides direct access to common actions.</p>
+<h2 id="7-Weekly-Report-Management"><a href="#7-Weekly-Report-Management" class="headerlink" title="7. Weekly Report Management"></a>7. Weekly Report Management</h2><p>The My Reports page is the core module for students. It allows students to create new reports, edit drafts, submit completed reports, view details, export reports, and use AI-related actions.</p>
+<p><img src="my-reports.png" srcset="/img/loading.gif" lazyload alt="My Reports Page"></p>
+<p>The weekly report structure is divided into several parts:</p>
+<ul>
+<li>Tasks: work completed during the week.</li>
+<li>Problems and reflection: difficulties, causes, and solutions.</li>
+<li>Next week plan: future tasks and priorities.</li>
+<li>Summary: final weekly report content generated or edited by the student.</li>
+</ul>
+<p>The system calculates report completeness based on the required content sections. This helps students understand whether a report is ready to submit. The report table also supports status badges, feedback status, last update time, and compact action buttons.</p>
+<h2 id="8-AI-Report-Generation"><a href="#8-AI-Report-Generation" class="headerlink" title="8. AI Report Generation"></a>8. AI Report Generation</h2><p>One of the most important features of UniversalWeekly is the AI weekly report builder. Students can enter keywords for tasks, problems, reflection, and next week plans. The AI then generates more complete and formal report content.</p>
+<p><img src="ai-report.png" srcset="/img/loading.gif" lazyload alt="AI Report Builder"></p>
+<p>This function is useful because students often know what they have done, but may not know how to organize it into a formal weekly report. The AI module converts short keywords into structured writing while preserving the report workflow.</p>
+<p>The AI report builder supports:</p>
+<ul>
+<li>Generating report sections from keywords.</li>
+<li>Completing the Tasks section.</li>
+<li>Completing the Problems and Reflection section.</li>
+<li>Completing the Next Week Plan section.</li>
+<li>Generating the final Summary section.</li>
+<li>Logging AI call history for review and transparency.</li>
+</ul>
+<p>The system supports local LLM providers such as Ollama as well as OpenAI-compatible endpoints. This design improves flexibility: the application can be used offline with a local model, or online with a stronger cloud model.</p>
+<h2 id="9-Embedded-AI-Assistant"><a href="#9-Embedded-AI-Assistant" class="headerlink" title="9. Embedded AI Assistant"></a>9. Embedded AI Assistant</h2><p>In addition to form-based AI generation, the system includes an embedded AI assistant window. The assistant is designed for natural language interaction. Users can ask it to generate weekly reports, polish text, check completeness, revise according to feedback, or explain how to improve a report.</p>
+<p><img src="ai-assistant.png" srcset="/img/loading.gif" lazyload alt="AI Assistant"></p>
+<p>The assistant supports the following scenarios:</p>
+<ul>
+<li>Generate a complete weekly report from keywords.</li>
+<li>Polish a rough paragraph into formal report language.</li>
+<li>Check whether a report contains all required sections.</li>
+<li>Rewrite a report according to teacher feedback.</li>
+<li>Help prepare a presentation script based on a selected report.</li>
+</ul>
+<p>This feature makes the system more than a database application. It becomes an AI-assisted writing environment for academic and project progress management.</p>
+<h2 id="10-Teacher-Review-and-Feedback"><a href="#10-Teacher-Review-and-Feedback" class="headerlink" title="10. Teacher Review and Feedback"></a>10. Teacher Review and Feedback</h2><p>The teacher interface allows teachers to manage student submissions. Teachers can view reports, check report details, add comments, use comment templates, and manage class-level review work.</p>
+<p><img src="teacher-page.png" srcset="/img/loading.gif" lazyload alt="Teacher Page"></p>
+<p>The teacher-side functions include:</p>
+<ul>
+<li>View weekly reports by class and week.</li>
+<li>Check report status and progress.</li>
+<li>Add single comments to a student report.</li>
+<li>Use feedback templates to improve review efficiency.</li>
+<li>Batch review multiple reports.</li>
+<li>View class statistics and high-frequency problems.</li>
+</ul>
+<p>The teacher module closes the workflow loop. Students do not only submit reports; they also receive feedback and can revise their work based on teacher comments.</p>
+<h2 id="11-Feedback-Center"><a href="#11-Feedback-Center" class="headerlink" title="11. Feedback Center"></a>11. Feedback Center</h2><p>The Feedback module helps students track teacher comments and revision requirements. It avoids the problem of feedback being lost in chat messages or separate files.</p>
+<p><img src="feedback.png" srcset="/img/loading.gif" lazyload alt="Feedback Center"></p>
+<p>Feedback records include:</p>
+<ul>
+<li>Comment content.</li>
+<li>Related weekly report.</li>
+<li>Read or unread status.</li>
+<li>Reply function.</li>
+<li>Teacher identity.</li>
+<li>Feedback time.</li>
+</ul>
+<p>This module improves communication efficiency because students can focus on actionable feedback rather than searching for scattered messages.</p>
+<h2 id="12-Analytics-and-Statistics"><a href="#12-Analytics-and-Statistics" class="headerlink" title="12. Analytics and Statistics"></a>12. Analytics and Statistics</h2><p>UniversalWeekly includes visual statistics for both students and teachers. These charts help users understand progress, submission status, and common problems.</p>
+<p><img src="analytics.png" srcset="/img/loading.gif" lazyload alt="Analytics Page"></p>
+<p>The statistics module includes:</p>
+<ul>
+<li>Submission rate.</li>
+<li>Average progress.</li>
+<li>Status distribution.</li>
+<li>Task completion trend.</li>
+<li>Problem distribution.</li>
+<li>Student progress history.</li>
+<li>Class weekly statistics.</li>
+</ul>
+<p>For students, analytics help them review personal learning progress. For teachers, analytics provide class-level decision support, such as identifying students who need help or topics that many students struggle with.</p>
+<h2 id="13-Student-Statistics"><a href="#13-Student-Statistics" class="headerlink" title="13. Student Statistics"></a>13. Student Statistics</h2><p>The student statistics view provides a more focused view of individual progress. It visualizes report history and problem distribution so that students can understand their learning pattern over time.</p>
+<p><img src="student-statistics.png" srcset="/img/loading.gif" lazyload alt="Student Statistics"></p>
+<p>The key value of this module is reflection. Weekly reports should not only be submitted; they should also help students observe their own progress, detect recurring issues, and plan future work more reasonably.</p>
+<h2 id="14-Tools-Center"><a href="#14-Tools-Center" class="headerlink" title="14. Tools Center"></a>14. Tools Center</h2><p>The Tools Center integrates several academic and productivity tools into one organized interface.</p>
+<p><img src="tools-center.png" srcset="/img/loading.gif" lazyload alt="Tools Center"></p>
+<p>The available tools include:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference Converter</td>
+<td>Convert references into common citation styles</td>
+</tr>
+<tr>
+<td>File Converter</td>
+<td>Convert documents into formats such as PDF or PPT where supported</td>
+</tr>
+<tr>
+<td>Translation Tool</td>
+<td>Translate words, sentences, and academic text using local model options</td>
+</tr>
+<tr>
+<td>Paper Card</td>
+<td>Generate a structured reading card from a paper title and abstract</td>
+</tr>
+<tr>
+<td>Presentation</td>
+<td>Generate a speech draft based on a selected weekly report date</td>
+</tr>
+<tr>
+<td>Memo Board</td>
+<td>Record temporary notes and reminders</td>
+</tr>
+<tr>
+<td>Weather &amp; Time</td>
+<td>Show date, time, and weather information</td>
+</tr>
+<tr>
+<td>AI Calls</td>
+<td>View AI model call history</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This design extends the system from a weekly report tool into a small academic workspace.</p>
+<h2 id="15-Settings-and-Personalization"><a href="#15-Settings-and-Personalization" class="headerlink" title="15. Settings and Personalization"></a>15. Settings and Personalization</h2><p>The Settings page allows users to manage profile-related information and system preferences.</p>
+<p><img src="settings.png" srcset="/img/loading.gif" lazyload alt="Settings Page"></p>
+<p>Possible settings include:</p>
+<ul>
+<li>Display name.</li>
+<li>Student ID.</li>
+<li>Class name.</li>
+<li>Email.</li>
+<li>Default export options.</li>
+<li>AI model configuration.</li>
+<li>Theme and interface preferences.</li>
+</ul>
+<p>The settings page improves system completeness and gives the application a more realistic product structure.</p>
+<h2 id="16-Data-Storage-and-Core-Tables"><a href="#16-Data-Storage-and-Core-Tables" class="headerlink" title="16. Data Storage and Core Tables"></a>16. Data Storage and Core Tables</h2><p>The application stores data locally through SQLite. The main data objects include:</p>
+<ul>
+<li>Users: account, role, class, email, student ID.</li>
+<li>Weekly reports: week number, date range, status, summary, update time.</li>
+<li>Tasks: task title, category, progress, status, tags.</li>
+<li>Problems: problem type, description, solution, reflection.</li>
+<li>Comments: teacher feedback, read status, replies.</li>
+<li>Templates: reusable report and feedback templates.</li>
+<li>Operation logs: user actions and AI call records.</li>
+</ul>
+<p>This data model supports both single-user operations and teacher-student collaboration.</p>
+<h2 id="17-Export-and-Archiving"><a href="#17-Export-and-Archiving" class="headerlink" title="17. Export and Archiving"></a>17. Export and Archiving</h2><p>UniversalWeekly supports multiple output formats. Students can export their reports for submission or backup, and teachers can export class statistics.</p>
+<p>Supported export functions include:</p>
+<ul>
+<li>Weekly report to Markdown.</li>
+<li>Weekly report to TXT.</li>
+<li>Weekly report to DOCX.</li>
+<li>Statistics to Excel.</li>
+<li>Batch export for multiple reports.</li>
+</ul>
+<p>This makes the system practical for real coursework, because final submission often requires an external document file.</p>
+<h2 id="18-Interface-Design-Optimization"><a href="#18-Interface-Design-Optimization" class="headerlink" title="18. Interface Design Optimization"></a>18. Interface Design Optimization</h2><p>The interface was optimized toward a modern SaaS dashboard style. Compared with a simple table-based interface, the improved design uses:</p>
+<ul>
+<li>A clear visual hierarchy.</li>
+<li>Dashboard cards for key metrics.</li>
+<li>Compact table actions.</li>
+<li>Status badges.</li>
+<li>White card components on a light background.</li>
+<li>A dark sidebar in the advanced design.</li>
+<li>Consistent colors for primary, success, warning, danger, and AI actions.</li>
+</ul>
+<p>The goal is to make the software look like a complete management platform rather than a collection of independent dialogs.</p>
+<h2 id="19-Testing-and-Validation"><a href="#19-Testing-and-Validation" class="headerlink" title="19. Testing and Validation"></a>19. Testing and Validation</h2><p>The following functions were tested during development:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Test Area</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>Correctly routes student and teacher accounts</td>
+</tr>
+<tr>
+<td>Report Creation</td>
+<td>Saves draft and submitted reports</td>
+</tr>
+<tr>
+<td>Report Editing</td>
+<td>Loads previous content and updates records</td>
+</tr>
+<tr>
+<td>AI Generation</td>
+<td>Generates report content from keywords</td>
+</tr>
+<tr>
+<td>Feedback</td>
+<td>Teacher comments can be viewed by students</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Markdown, TXT, DOCX, and Excel export functions run correctly</td>
+</tr>
+<tr>
+<td>Statistics</td>
+<td>Charts display submission and progress data</td>
+</tr>
+<tr>
+<td>Tools Center</td>
+<td>Tool dialogs open from the centralized interface</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>During testing, several interface problems were also improved, such as table column widths, button layout, completeness badge display, chart label clipping, and page bottom whitespace.</p>
+<h2 id="20-Limitations-and-Future-Work"><a href="#20-Limitations-and-Future-Work" class="headerlink" title="20. Limitations and Future Work"></a>20. Limitations and Future Work</h2><p>Although the project already provides a complete weekly report workflow, there are still areas that can be improved:</p>
+<ol>
+<li>The AI assistant can be further connected with all report fields to support more context-aware generation.</li>
+<li>Cloud synchronization can be added so that reports can be accessed from multiple devices.</li>
+<li>Friend sharing and peer review can be added to support collaborative learning.</li>
+<li>A web version can be developed for easier deployment and remote access.</li>
+<li>More advanced analytics can be added, such as risk prediction and personalized learning suggestions.</li>
+<li>Permission management can be enhanced for larger classes and multiple teachers.</li>
+</ol>
+<h2 id="21-Conclusion"><a href="#21-Conclusion" class="headerlink" title="21. Conclusion"></a>21. Conclusion</h2><p>UniversalWeekly is a dual-role weekly report management system that integrates report submission, teacher feedback, AI-assisted writing, statistics, export, and academic tools. The system demonstrates how a traditional weekly report workflow can be transformed into an intelligent and structured software platform.</p>
+<p>The most important value of this project is its complete workflow. Students can create and improve reports, teachers can review and comment, and the AI assistant can help generate, polish, translate, and summarize content. The application therefore supports not only report submission, but also reflection, communication, and continuous learning.</p>
+<p>The interactive HTML presentation used during project preparation is also included as an additional artifact: <a href="universalweekly-presentation.html">Open UniversalWeekly Presentation</a>.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Course/" class="category-chain-item">Course</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Assignment/" class="print-no-link">#Assignment</a>
+      
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
+      
+        <a href="/tags/PyQt6/" class="print-no-link">#PyQt6</a>
+      
+        <a href="/tags/Software-Engineering/" class="print-no-link">#Software Engineering</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Assignment 4 - UniversalWeekly AI Weekly Report Management System</div>
+      <div>https://qiyongpeng.github.io/2026/06/12/assignment4/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Qi Yongpeng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 12, 2026</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/05/08/assignment3/" title="Assignment 3 - AI Agent Deployment and Integration">
+                        <span class="hidden-mobile">Assignment 3 - AI Agent Deployment and Integration</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
